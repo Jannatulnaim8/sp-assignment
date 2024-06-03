@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Function to calculate the sum of digits
+int sumOfDigits(int n) {
+    int sum = 0;
+    while (n != 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+
+    printf("Enter a non-negative integer: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Please enter a non-negative integer.\n");
+    } else {
+        int sum = sumOfDigits(n);
+        printf("The sum of the digits of %d is %d.\n", n, sum);
+    }
+
+    return 0;
+} 
